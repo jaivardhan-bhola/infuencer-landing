@@ -1,20 +1,16 @@
 import './App.css'
 import heroImage from './assets/Hero.png'
-import { useState } from 'react'
 
 function App() {
-  const [activeStep, setActiveStep] = useState(1)
-
-  const handleStepClick = (stepNumber: number) => {
-    setActiveStep(stepNumber)
-  }
   return (
     <div className="App">
       {/* Header */}
       <header className="header">
         <div className="container">
           <div className="logo">
-            <span className="logo-icon">★</span>
+            <span className="logo-icon">
+              <i className="fas fa-star"></i>
+            </span>
             <span className="logo-text">PostHaus</span>
           </div>
           <nav className="nav">
@@ -34,11 +30,15 @@ function App() {
             <p>Whether you're targeting customers in Lucknow or Delhi, or need creators under 50K followers—we help you connect with the right influencers.</p>
             <div className="cta-buttons">
               <button className="cta-button whatsapp-btn">
-                <span className="btn-icon">💬</span>
+                <span className="btn-icon">
+                  <i className="fab fa-whatsapp"></i>
+                </span>
                 WhatsApp
               </button>
               <button className="cta-button email-btn">
-                <span className="btn-icon">✉️</span>
+                <span className="btn-icon">
+                  <i className="fas fa-envelope"></i>
+                </span>
                 Email
               </button>
             </div>
@@ -52,67 +52,99 @@ function App() {
             <h3 className="categories-title">Categories We Cover</h3>
             <div className="categories-grid">
               <div className="category-item">
-                <span className="category-icon">🐕</span>
+                <span className="category-icon">
+                  <i className="fas fa-dog"></i>
+                </span>
                 <span className="category-text">Pets</span>
               </div>
               <div className="category-item">
-                <span className="category-icon">✈️</span>
+                <span className="category-icon">
+                  <i className="fas fa-plane"></i>
+                </span>
                 <span className="category-text">Travel</span>
               </div>
               <div className="category-item">
-                <span className="category-icon">📚</span>
+                <span className="category-icon">
+                  <i className="fas fa-graduation-cap"></i>
+                </span>
                 <span className="category-text">Education & Tips</span>
               </div>
               <div className="category-item">
-                <span className="category-icon">🛍️</span>
+                <span className="category-icon">
+                  <i className="fas fa-shopping-bag"></i>
+                </span>
                 <span className="category-text">Shopping & Reviews</span>
               </div>
               <div className="category-item">
-                <span className="category-icon">💼</span>
+                <span className="category-icon">
+                  <i className="fas fa-briefcase"></i>
+                </span>
                 <span className="category-text">Career & Productivity</span>
               </div>
               <div className="category-item">
-                <span className="category-icon">💪</span>
+                <span className="category-icon">
+                  <i className="fas fa-dumbbell"></i>
+                </span>
                 <span className="category-text">Fitness & Wellness</span>
               </div>
               <div className="category-item">
-                <span className="category-icon">🧘</span>
+                <span className="category-icon">
+                  <i className="fas fa-heart"></i>
+                </span>
                 <span className="category-text">Health & Wellness</span>
               </div>
               <div className="category-item">
-                <span className="category-icon">⚽</span>
+                <span className="category-icon">
+                  <i className="fas fa-futbol"></i>
+                </span>
                 <span className="category-text">Sports</span>
               </div>
               <div className="category-item">
-                <span className="category-icon">📱</span>
+                <span className="category-icon">
+                  <i className="fas fa-mobile-alt"></i>
+                </span>
                 <span className="category-text">Tech & Gadgets</span>
               </div>
               <div className="category-item">
-                <span className="category-icon">🚀</span>
+                <span className="category-icon">
+                  <i className="fas fa-rocket"></i>
+                </span>
                 <span className="category-text">Business & Entrepreneur</span>
               </div>
               <div className="category-item">
-                <span className="category-icon">🏠</span>
+                <span className="category-icon">
+                  <i className="fas fa-home"></i>
+                </span>
                 <span className="category-text">Home & Lifestyle</span>
               </div>
               <div className="category-item">
-                <span className="category-icon">👗</span>
+                <span className="category-icon">
+                  <i className="fas fa-tshirt"></i>
+                </span>
                 <span className="category-text">Fashion & Style</span>
               </div>
               <div className="category-item">
-                <span className="category-icon">🧴</span>
+                <span className="category-icon">
+                  <i className="fas fa-spray-can"></i>
+                </span>
                 <span className="category-text">Beauty & Skincare</span>
               </div>
               <div className="category-item">
-                <span className="category-icon">🍳</span>
+                <span className="category-icon">
+                  <i className="fas fa-utensils"></i>
+                </span>
                 <span className="category-text">Food & Cooking</span>
               </div>
               <div className="category-item">
-                <span className="category-icon">👶</span>
+                <span className="category-icon">
+                  <i className="fas fa-baby"></i>
+                </span>
                 <span className="category-text">Parenting</span>
               </div>
               <div className="category-item">
-                <span className="category-icon">🎨</span>
+                <span className="category-icon">
+                  <i className="fas fa-palette"></i>
+                </span>
                 <span className="category-text">Interior Design</span>
               </div>
             </div>
@@ -123,59 +155,72 @@ function App() {
       {/* Services Section */}
       <section id="services" className="services">
         <div className="container">
-          <h2>Services</h2>
-          <p>We specialize in connecting brands with the perfect influencers through our comprehensive influencer marketing platform. From discovery to campaign execution, we handle everything.</p>
+          <div className="section-header">
+            <span className="section-badge">Our Services</span>
+            <h2>Comprehensive Solutions</h2>
+            <p>Comprehensive influencer marketing solutions designed to amplify your brand's reach and engagement through authentic partnerships.</p>
+          </div>
           <div className="services-grid">
-            <div className="service-card green">
-              <h3>Hyperlocal Influencer Discovery</h3>
-              <ul className="service-features">
-                <li>City-level targeting</li>
-                <li>Category alignment</li>
-                <li>Authentic engagement</li>
-              </ul>
-              <div className="service-icon">🎯</div>
+            <div className="service-card">
+              <div className="service-number">01</div>
+              <div className="service-content">
+                <div className="service-icon">
+                  <i className="fas fa-search"></i>
+                </div>
+                <h3>Hyperlocal Influencer Discovery</h3>
+                <p>City-level targeting and micro-location insights for perfect brand alignment.</p>
+                <ul className="service-features">
+                  <li>City-level targeting and micro-location insights</li>
+                  <li>Perfect category alignment with your brand</li>
+                  <li>Verified authentic engagement metrics</li>
+                </ul>
+              </div>
             </div>
-            <div className="service-card dark">
-              <h3>End-to-End Content Production</h3>
-              <ul className="service-features">
-                <li>Scriptwriting</li>
-                <li>Remote/on-site shooting</li>
-                <li>Editing & coordination</li>
-              </ul>
-              <div className="service-icon">🎬</div>
+            <div className="service-card">
+              <div className="service-number">02</div>
+              <div className="service-content">
+                <div className="service-icon">
+                  <i className="fas fa-video"></i>
+                </div>
+                <h3>Content Production</h3>
+                <p>Professional content creation from concept to final delivery.</p>
+                <ul className="service-features">
+                  <li>Professional scriptwriting and storyboarding</li>
+                  <li>Remote and on-site shooting coordination</li>
+                  <li>Post-production editing and optimization</li>
+                </ul>
+              </div>
             </div>
-            <div className="service-card green">
-              <h3>Influencer Shortlisting</h3>
-              <ul className="service-features">
-                <li>AI-powered matching</li>
-                <li>Engagement rate analysis</li>
-                <li>Brand safety checks</li>
-              </ul>
-              <div className="service-icon">✅</div>
+            <div className="service-card">
+              <div className="service-number">03</div>
+              <div className="service-content">
+                <div className="service-icon">
+                  <i className="fas fa-robot"></i>
+                </div>
+                <h3>AI-Powered Matching</h3>
+                <p>Advanced algorithms for perfect influencer-brand partnerships.</p>
+                <ul className="service-features">
+                  <li>Advanced algorithm for perfect matches</li>
+                  <li>Real-time engagement rate analysis</li>
+                  <li>Comprehensive brand safety checks</li>
+                </ul>
+              </div>
             </div>
-            <div className="service-card dark">
-              <h3>Campaign Reporting & Optimization</h3>
-              <ul className="service-features">
-                <li>Real-time analytics</li>
-                <li>Performance tracking</li>
-                <li>ROI optimization</li>
-              </ul>
-              <div className="service-icon">📊</div>
+            <div className="service-card">
+              <div className="service-number">04</div>
+              <div className="service-content">
+                <div className="service-icon">
+                  <i className="fas fa-chart-line"></i>
+                </div>
+                <h3>Analytics & Optimization</h3>
+                <p>Comprehensive tracking and optimization for maximum ROI.</p>
+                <ul className="service-features">
+                  <li>Real-time campaign performance tracking</li>
+                  <li>Detailed ROI and engagement analytics</li>
+                  <li>Continuous optimization recommendations</li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section id="contact" className="cta-section">
-        <div className="container">
-          <div className="cta-content">
-            <h2>Let's make things happen</h2>
-            <p>Contact us today to learn more about how our influencer marketing services can help your business grow and succeed online.</p>
-            <button className="cta-button">Get your free proposal</button>
-          </div>
-          <div className="cta-visual">
-            <div className="smiley">😊</div>
           </div>
         </div>
       </section>
@@ -183,28 +228,51 @@ function App() {
       {/* Why Us / Algorithm Section */}
       <section id="about" className="algorithm-section">
         <div className="container">
-          <h2>Why Our Algorithm Works</h2>
-          <p>Our AI-powered matching system ensures perfect influencer-brand partnerships through comprehensive analysis</p>
+          <div className="section-header">
+            <span className="section-badge">Our Technology</span>
+            <h2>Why Our Algorithm Works</h2>
+            <p>Our AI-powered matching system ensures perfect influencer-brand partnerships through comprehensive analysis and data-driven insights</p>
+          </div>
           <div className="algorithm-grid">
             <div className="algorithm-card">
-              <div className="algorithm-icon">📊</div>
-              <h3>Engagement Analysis</h3>
-              <p>Deep-dive into authentic engagement patterns, comment quality, and audience interaction to identify genuine influence.</p>
+              <div className="algorithm-number">01</div>
+              <div className="algorithm-content">
+                <h3>Engagement Analysis</h3>
+                <p>Deep-dive into authentic engagement patterns, comment quality, and audience interaction to identify genuine influence and filter out fake followers.</p>
+                <div className="algorithm-metrics">
+                  <span className="metric">98% Accuracy</span>
+                </div>
+              </div>
             </div>
             <div className="algorithm-card">
-              <div className="algorithm-icon">🎯</div>
-              <h3>Audience Intent Match</h3>
-              <p>Match influencer audiences with your target demographics using behavioral data and interest mapping.</p>
+              <div className="algorithm-number">02</div>
+              <div className="algorithm-content">
+                <h3>Audience Intent Match</h3>
+                <p>Match influencer audiences with your target demographics using behavioral data, interest mapping, and purchase intent signals.</p>
+                <div className="algorithm-metrics">
+                  <span className="metric">85% Higher ROI</span>
+                </div>
+              </div>
             </div>
             <div className="algorithm-card">
-              <div className="algorithm-icon">⭐</div>
-              <h3>Brand Fit Score</h3>
-              <p>Analyze content style, values alignment, and previous brand partnerships to ensure perfect brand-creator fit.</p>
+              <div className="algorithm-number">03</div>
+              <div className="algorithm-content">
+                <h3>Brand Fit Score</h3>
+                <p>Analyze content style, values alignment, and previous brand partnerships to ensure perfect brand-creator fit and authentic collaborations.</p>
+                <div className="algorithm-metrics">
+                  <span className="metric">90% Success Rate</span>
+                </div>
+              </div>
             </div>
             <div className="algorithm-card">
-              <div className="algorithm-icon">✅</div>
-              <h3>Partnership Readiness Check</h3>
-              <p>Evaluate creator professionalism, content consistency, and collaboration history for smooth partnerships.</p>
+              <div className="algorithm-number">04</div>
+              <div className="algorithm-content">
+                <h3>Partnership Readiness</h3>
+                <p>Evaluate creator professionalism, content consistency, and collaboration history for smooth partnerships and reliable delivery.</p>
+                <div className="algorithm-metrics">
+                  <span className="metric">95% On-Time</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -213,33 +281,119 @@ function App() {
       {/* Deliverables Section */}
       <section className="deliverables">
         <div className="container">
-          <h2>What You Get</h2>
-          <p>Comprehensive deliverables that drive your influencer marketing success</p>
+          <div className="section-header">
+            <span className="section-badge">Deliverables</span>
+            <h2>What You Get</h2>
+            <p>Comprehensive deliverables that drive your influencer marketing success and deliver measurable results</p>
+          </div>
           <div className="deliverables-grid">
-            <div className="deliverable-item">
-              <div className="deliverable-icon">📋</div>
-              <h3>Influencer Shortlists</h3>
-              <p>Curated lists of pre-vetted influencers with detailed profiles, engagement metrics, and audience insights.</p>
+            <div className="deliverable-card">
+              <div className="deliverable-number">01</div>
+              <div className="deliverable-content">
+                <div className="deliverable-icon">
+                  <i className="fas fa-clipboard-list"></i>
+                </div>
+                <h3>Influencer Shortlists</h3>
+                <p>Curated lists of pre-vetted influencers with detailed profiles, engagement metrics, and audience insights.</p>
+                <div className="deliverable-features">
+                  <span className="feature-tag">
+                    <i className="fas fa-check"></i> Audience Analytics
+                  </span>
+                  <span className="feature-tag">
+                    <i className="fas fa-check"></i> Engagement Rates
+                  </span>
+                </div>
+              </div>
             </div>
-            <div className="deliverable-item">
-              <div className="deliverable-icon">🎬</div>
-              <h3>Edited Reels</h3>
-              <p>Professional video content edited to your brand guidelines, optimized for maximum engagement and conversions.</p>
+            <div className="deliverable-card">
+              <div className="deliverable-number">02</div>
+              <div className="deliverable-content">
+                <div className="deliverable-icon">
+                  <i className="fas fa-video"></i>
+                </div>
+                <h3>Edited Reels</h3>
+                <p>Professional video content edited to your brand guidelines, optimized for maximum engagement and conversions.</p>
+                <div className="deliverable-features">
+                  <span className="feature-tag">
+                    <i className="fas fa-check"></i> Brand Guidelines
+                  </span>
+                  <span className="feature-tag">
+                    <i className="fas fa-check"></i> Pro Editing
+                  </span>
+                </div>
+              </div>
             </div>
-            <div className="deliverable-item">
-              <div className="deliverable-icon">📝</div>
-              <h3>Content Breakdown</h3>
-              <p>Detailed analysis of content performance, engagement rates, and audience response across all campaigns.</p>
+            <div className="deliverable-card">
+              <div className="deliverable-number">03</div>
+              <div className="deliverable-content">
+                <div className="deliverable-icon">
+                  <i className="fas fa-file-alt"></i>
+                </div>
+                <h3>Content Breakdown</h3>
+                <p>Detailed analysis of content performance, engagement rates, and audience response across all campaigns.</p>
+                <div className="deliverable-features">
+                  <span className="feature-tag">
+                    <i className="fas fa-check"></i> Performance Metrics
+                  </span>
+                  <span className="feature-tag">
+                    <i className="fas fa-check"></i> Audience Insights
+                  </span>
+                </div>
+              </div>
             </div>
-            <div className="deliverable-item">
-              <div className="deliverable-icon">💡</div>
-              <h3>Creative Recommendations</h3>
-              <p>Data-driven suggestions for content themes, messaging strategies, and optimization opportunities.</p>
+            <div className="deliverable-card">
+              <div className="deliverable-number">04</div>
+              <div className="deliverable-content">
+                <div className="deliverable-icon">
+                  <i className="fas fa-lightbulb"></i>
+                </div>
+                <h3>Creative Recommendations</h3>
+                <p>Data-driven suggestions for content themes, messaging strategies, and optimization opportunities.</p>
+                <div className="deliverable-features">
+                  <span className="feature-tag">
+                    <i className="fas fa-check"></i> Data-Driven
+                  </span>
+                  <span className="feature-tag">
+                    <i className="fas fa-check"></i> Optimization
+                  </span>
+                </div>
+              </div>
             </div>
-            <div className="deliverable-item">
-              <div className="deliverable-icon">📊</div>
-              <h3>Exportable Reports</h3>
-              <p>Comprehensive analytics reports with ROI tracking, performance metrics, and actionable insights for stakeholders.</p>
+            <div className="deliverable-card">
+              <div className="deliverable-number">05</div>
+              <div className="deliverable-content">
+                <div className="deliverable-icon">
+                  <i className="fas fa-chart-bar"></i>
+                </div>
+                <h3>Exportable Reports</h3>
+                <p>Comprehensive analytics reports with ROI tracking, performance metrics, and actionable insights for stakeholders.</p>
+                <div className="deliverable-features">
+                  <span className="feature-tag">
+                    <i className="fas fa-check"></i> ROI Tracking
+                  </span>
+                  <span className="feature-tag">
+                    <i className="fas fa-check"></i> Actionable Insights
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="deliverable-card">
+              <div className="deliverable-number">06</div>
+              <div className="deliverable-content">
+                <div className="deliverable-icon">
+                  <i className="fas fa-bullseye"></i>
+                </div>
+                <h3>Campaign Management</h3>
+                <p>End-to-end campaign oversight with timeline management, influencer coordination, and real-time monitoring.</p>
+                <div className="deliverable-features">
+                  <span className="feature-tag">
+                    <i className="fas fa-check"></i> Timeline Management
+                  </span>
+                  <span className="feature-tag">
+                    <i className="fas fa-check"></i> Real-time Monitoring
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -248,79 +402,113 @@ function App() {
       {/* Working Process */}
       <section id="process" className="working-process">
         <div className="container">
-          <h2>Our Working Process</h2>
-          <p>Step-by-Step Guide to Your Influencer Marketing Success</p>
-          <div className="process-steps">
-            <div 
-              className={`process-step ${activeStep === 1 ? 'active' : ''}`}
-              onClick={() => handleStepClick(1)}
-            >
-              <div className="step-number">01</div>
+          <div className="section-header">
+            <span className="section-badge">Our Process</span>
+            <h2>How We Transform Your Brand into an Influencer Marketing Success</h2>
+            <p>Our proven 6-step methodology ensures maximum ROI and authentic brand representation across all campaigns.</p>
+          </div>
+          
+          <div className="process-timeline">
+            <div className="timeline-line"></div>
+            
+            <div className="process-step">
+              <div className="step-indicator">
+                <div className="step-number">01</div>
+                <div className="step-icon">
+                  <i className="fas fa-search"></i>
+                </div>
+              </div>
               <div className="step-content">
-                <h3>Discovery</h3>
-                {activeStep === 1 && (
-                  <p>We identify the perfect influencers for your brand by analyzing their audience demographics, engagement rates, and content alignment with your target market and brand values.</p>
-                )}
+                <h3>Strategic Discovery & Research</h3>
+                <div className="step-duration">2-3 Days</div>
+                <p>Deep-dive analysis to identify perfect influencers aligned with your brand values, target demographics, and campaign objectives.</p>
               </div>
             </div>
-            <div 
-              className={`process-step ${activeStep === 2 ? 'active' : ''}`}
-              onClick={() => handleStepClick(2)}
-            >
-              <div className="step-number">02</div>
+
+            <div className="process-step">
+              <div className="step-indicator">
+                <div className="step-number">02</div>
+                <div className="step-icon">
+                  <i className="fas fa-handshake"></i>
+                </div>
+              </div>
               <div className="step-content">
-                <h3>Outreach</h3>
-                {activeStep === 2 && (
-                  <p>Our team handles all communications with influencers, negotiating rates, discussing campaign requirements, and finalizing partnerships to ensure smooth collaboration.</p>
-                )}
+                <h3>Professional Outreach & Negotiation</h3>
+                <div className="step-duration">3-5 Days</div>
+                <p>Personal outreach to influencers with professional proposals, rate negotiations, and partnership agreements.</p>
               </div>
             </div>
-            <div 
-              className={`process-step ${activeStep === 3 ? 'active' : ''}`}
-              onClick={() => handleStepClick(3)}
-            >
-              <div className="step-number">03</div>
+
+            <div className="process-step">
+              <div className="step-indicator">
+                <div className="step-number">03</div>
+                <div className="step-icon">
+                  <i className="fas fa-edit"></i>
+                </div>
+              </div>
               <div className="step-content">
-                <h3>Scripting</h3>
-                {activeStep === 3 && (
-                  <p>We create compelling scripts and content briefs that maintain your brand voice while allowing influencers to showcase your products authentically to their audience.</p>
-                )}
+                <h3>Creative Scripting & Content Planning</h3>
+                <div className="step-duration">2-4 Days</div>
+                <p>Collaborative script development that maintains brand voice while preserving influencer authenticity and creativity.</p>
               </div>
             </div>
-            <div 
-              className={`process-step ${activeStep === 4 ? 'active' : ''}`}
-              onClick={() => handleStepClick(4)}
-            >
-              <div className="step-number">04</div>
+
+            <div className="process-step">
+              <div className="step-indicator">
+                <div className="step-number">04</div>
+                <div className="step-icon">
+                  <i className="fas fa-video"></i>
+                </div>
+              </div>
               <div className="step-content">
-                <h3>Shooting</h3>
-                {activeStep === 4 && (
-                  <p>Whether remote or on-site, we coordinate the entire content creation process, ensuring high-quality visuals and messaging that resonate with your target audience.</p>
-                )}
+                <h3>Content Creation & Production</h3>
+                <div className="step-duration">3-7 Days</div>
+                <p>Professional content creation with quality control, ensuring brand guidelines while maintaining authentic influencer style.</p>
               </div>
             </div>
-            <div 
-              className={`process-step ${activeStep === 5 ? 'active' : ''}`}
-              onClick={() => handleStepClick(5)}
-            >
-              <div className="step-number">05</div>
+
+            <div className="process-step">
+              <div className="step-indicator">
+                <div className="step-number">05</div>
+                <div className="step-icon">
+                  <i className="fas fa-cut"></i>
+                </div>
+              </div>
               <div className="step-content">
-                <h3>Editing</h3>
-                {activeStep === 5 && (
-                  <p>Our creative team handles post-production, editing content to match your brand guidelines while maintaining the influencer's authentic style and voice.</p>
-                )}
+                <h3>Professional Editing & Optimization</h3>
+                <div className="step-duration">2-3 Days</div>
+                <p>Expert post-production and editing to enhance content quality while maintaining authentic influencer voice and style.</p>
               </div>
             </div>
-            <div 
-              className={`process-step ${activeStep === 6 ? 'active' : ''}`}
-              onClick={() => handleStepClick(6)}
-            >
-              <div className="step-number">06</div>
+
+            <div className="process-step">
+              <div className="step-indicator">
+                <div className="step-number">06</div>
+                <div className="step-icon">
+                  <i className="fas fa-chart-line"></i>
+                </div>
+              </div>
               <div className="step-content">
-                <h3>Publishing & Reporting</h3>
-                {activeStep === 6 && (
-                  <p>We manage the content publishing schedule and provide detailed analytics reports showing reach, engagement, conversions, and ROI for your campaign.</p>
-                )}
+                <h3>Strategic Publishing & Performance Analytics</h3>
+                <div className="step-duration">Ongoing</div>
+                <p>Optimal posting schedule execution with comprehensive performance tracking and detailed ROI reporting.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="process-summary">
+            <div className="summary-stats">
+              <div className="stat-item">
+                <div className="stat-number">15-25</div>
+                <div className="stat-label">Days Average Timeline</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">300%</div>
+                <div className="stat-label">Average ROI Increase</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">95%</div>
+                <div className="stat-label">Client Satisfaction Rate</div>
               </div>
             </div>
           </div>
