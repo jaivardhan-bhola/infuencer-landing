@@ -1,7 +1,14 @@
 import './App.css'
 import heroImage from './assets/Hero.png'
+import { useState } from 'react'
 
 function App() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
   return (
     <div className="App">
       {/* Header */}
@@ -13,11 +20,20 @@ function App() {
             </span>
             <span className="logo-text">PostHaus</span>
           </div>
-          <nav className="nav">
-            <a href="#about">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#process">Process</a>
-            <a href="#contact" className="contact-btn">Request a quote</a>
+          <button 
+            className={`mobile-menu-toggle ${isMobileMenuOpen ? 'active' : ''}`}
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav className={`nav ${isMobileMenuOpen ? 'active' : ''}`}>
+            <a href="#about" onClick={() => setIsMobileMenuOpen(false)}>About Us</a>
+            <a href="#services" onClick={() => setIsMobileMenuOpen(false)}>Services</a>
+            <a href="#process" onClick={() => setIsMobileMenuOpen(false)}>Process</a>
+            <a href="#contact" className="contact-btn" onClick={() => setIsMobileMenuOpen(false)}>Request a quote</a>
           </nav>
         </div>
       </header>
@@ -486,23 +502,6 @@ function App() {
               <div className="step-content">
                 <h3>Strategic Publishing & Performance Analytics</h3>
                 <p>Optimal posting schedule execution with comprehensive performance tracking and detailed ROI reporting.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="process-summary">
-            <div className="summary-stats">
-              <div className="stat-item">
-                <div className="stat-number">15-25</div>
-                <div className="stat-label">Days Average Timeline</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">300%</div>
-                <div className="stat-label">Average ROI Increase</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">95%</div>
-                <div className="stat-label">Client Satisfaction Rate</div>
               </div>
             </div>
           </div>
