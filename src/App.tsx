@@ -420,7 +420,6 @@ function App() {
               </div>
               <div className="step-content">
                 <h3>Strategic Discovery & Research</h3>
-                <div className="step-duration">2-3 Days</div>
                 <p>Deep-dive analysis to identify perfect influencers aligned with your brand values, target demographics, and campaign objectives.</p>
               </div>
             </div>
@@ -434,7 +433,6 @@ function App() {
               </div>
               <div className="step-content">
                 <h3>Professional Outreach & Negotiation</h3>
-                <div className="step-duration">3-5 Days</div>
                 <p>Personal outreach to influencers with professional proposals, rate negotiations, and partnership agreements.</p>
               </div>
             </div>
@@ -448,7 +446,6 @@ function App() {
               </div>
               <div className="step-content">
                 <h3>Creative Scripting & Content Planning</h3>
-                <div className="step-duration">2-4 Days</div>
                 <p>Collaborative script development that maintains brand voice while preserving influencer authenticity and creativity.</p>
               </div>
             </div>
@@ -462,7 +459,6 @@ function App() {
               </div>
               <div className="step-content">
                 <h3>Content Creation & Production</h3>
-                <div className="step-duration">3-7 Days</div>
                 <p>Professional content creation with quality control, ensuring brand guidelines while maintaining authentic influencer style.</p>
               </div>
             </div>
@@ -476,7 +472,6 @@ function App() {
               </div>
               <div className="step-content">
                 <h3>Professional Editing & Optimization</h3>
-                <div className="step-duration">2-3 Days</div>
                 <p>Expert post-production and editing to enhance content quality while maintaining authentic influencer voice and style.</p>
               </div>
             </div>
@@ -490,7 +485,6 @@ function App() {
               </div>
               <div className="step-content">
                 <h3>Strategic Publishing & Performance Analytics</h3>
-                <div className="step-duration">Ongoing</div>
                 <p>Optimal posting schedule execution with comprehensive performance tracking and detailed ROI reporting.</p>
               </div>
             </div>
