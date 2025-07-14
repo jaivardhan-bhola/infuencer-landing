@@ -9,6 +9,25 @@ function App() {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
 
+  const categories = [
+    { icon: "fas fa-dog", text: "Pets" },
+    { icon: "fas fa-plane", text: "Travel" },
+    { icon: "fas fa-graduation-cap", text: "Education & Tips" },
+    { icon: "fas fa-shopping-bag", text: "Shopping & Reviews" },
+    { icon: "fas fa-briefcase", text: "Career & Productivity" },
+    { icon: "fas fa-dumbbell", text: "Fitness & Wellness" },
+    { icon: "fas fa-heart", text: "Health & Wellness" },
+    { icon: "fas fa-futbol", text: "Sports" },
+    { icon: "fas fa-mobile-alt", text: "Tech & Gadgets" },
+    { icon: "fas fa-rocket", text: "Business & Entrepreneur" },
+    { icon: "fas fa-home", text: "Home & Lifestyle" },
+    { icon: "fas fa-tshirt", text: "Fashion & Style" },
+    { icon: "fas fa-spray-can", text: "Beauty & Skincare" },
+    { icon: "fas fa-utensils", text: "Food & Cooking" },
+    { icon: "fas fa-baby", text: "Parenting" },
+    { icon: "fas fa-palette", text: "Interior Design" }
+  ]
+
   return (
     <div className="App">
       {/* Header */}
@@ -63,107 +82,46 @@ function App() {
             <img src={heroImage} alt="Digital landscape illustration" className="hero-image" />
           </div>
         </div>
-        <div className="brands">
-          <div className="container">
-            <h3 className="categories-title">Categories We Cover</h3>
-            <div className="categories-grid">
-              <div className="category-item">
+      </section>
+
+      {/* Categories Section */}
+      <section className="categories">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-badge">Our Expertise</span>
+            <h2>Categories We Cover</h2>
+            <p>We work with influencers across diverse niches to help your brand connect with the right audience in every category.</p>
+          </div>
+        </div>
+        <div className="infinite-scroll-container">
+          <div className="infinite-scroll-track">
+            {/* First set */}
+            {categories.map((category, index) => (
+              <div key={`set1-${index}`} className="category-item">
                 <span className="category-icon">
-                  <i className="fas fa-dog"></i>
+                  <i className={category.icon}></i>
                 </span>
-                <span className="category-text">Pets</span>
+                <span className="category-text">{category.text}</span>
               </div>
-              <div className="category-item">
+            ))}
+            {/* Second set */}
+            {categories.map((category, index) => (
+              <div key={`set2-${index}`} className="category-item">
                 <span className="category-icon">
-                  <i className="fas fa-plane"></i>
+                  <i className={category.icon}></i>
                 </span>
-                <span className="category-text">Travel</span>
+                <span className="category-text">{category.text}</span>
               </div>
-              <div className="category-item">
+            ))}
+            {/* Third set */}
+            {categories.map((category, index) => (
+              <div key={`set3-${index}`} className="category-item">
                 <span className="category-icon">
-                  <i className="fas fa-graduation-cap"></i>
+                  <i className={category.icon}></i>
                 </span>
-                <span className="category-text">Education & Tips</span>
+                <span className="category-text">{category.text}</span>
               </div>
-              <div className="category-item">
-                <span className="category-icon">
-                  <i className="fas fa-shopping-bag"></i>
-                </span>
-                <span className="category-text">Shopping & Reviews</span>
-              </div>
-              <div className="category-item">
-                <span className="category-icon">
-                  <i className="fas fa-briefcase"></i>
-                </span>
-                <span className="category-text">Career & Productivity</span>
-              </div>
-              <div className="category-item">
-                <span className="category-icon">
-                  <i className="fas fa-dumbbell"></i>
-                </span>
-                <span className="category-text">Fitness & Wellness</span>
-              </div>
-              <div className="category-item">
-                <span className="category-icon">
-                  <i className="fas fa-heart"></i>
-                </span>
-                <span className="category-text">Health & Wellness</span>
-              </div>
-              <div className="category-item">
-                <span className="category-icon">
-                  <i className="fas fa-futbol"></i>
-                </span>
-                <span className="category-text">Sports</span>
-              </div>
-              <div className="category-item">
-                <span className="category-icon">
-                  <i className="fas fa-mobile-alt"></i>
-                </span>
-                <span className="category-text">Tech & Gadgets</span>
-              </div>
-              <div className="category-item">
-                <span className="category-icon">
-                  <i className="fas fa-rocket"></i>
-                </span>
-                <span className="category-text">Business & Entrepreneur</span>
-              </div>
-              <div className="category-item">
-                <span className="category-icon">
-                  <i className="fas fa-home"></i>
-                </span>
-                <span className="category-text">Home & Lifestyle</span>
-              </div>
-              <div className="category-item">
-                <span className="category-icon">
-                  <i className="fas fa-tshirt"></i>
-                </span>
-                <span className="category-text">Fashion & Style</span>
-              </div>
-              <div className="category-item">
-                <span className="category-icon">
-                  <i className="fas fa-spray-can"></i>
-                </span>
-                <span className="category-text">Beauty & Skincare</span>
-              </div>
-              <div className="category-item">
-                <span className="category-icon">
-                  <i className="fas fa-utensils"></i>
-                </span>
-                <span className="category-text">Food & Cooking</span>
-              </div>
-              <div className="category-item">
-                <span className="category-icon">
-                  <i className="fas fa-baby"></i>
-                </span>
-                <span className="category-text">Parenting</span>
-              </div>
-              <div className="category-item">
-                <span className="category-icon">
-                  <i className="fas fa-palette"></i>
-                </span>
-                <span className="category-text">Interior Design</span>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
